@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header PEACH</title>
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="./pages/otrocss/header.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="header-fijo header-with-horizontal-navheader">
+
+        <!-- Barra superior -->
+        <div class="peach-topbar">
+            ¡Explora la ciencia y las humanidades con PEACH! 🔬🐒
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="peach-navbar">
+            <div class="nav-container">
+
+                <!-- Logo -->
+                <a href="./index.html" class="logo-link">
+                    <img src="./images/peach.jpg" class="logo" alt="Logo" style="width: 50px;">
+                </a>
+
+                <!-- Botón hamburguesa -->
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                    ☰
+                </button>
+
+                <!-- Menú (único navMenu, aquí es donde se hace toggle de .active) -->
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./temp.html">Temperatura</a></li>
+                        <li><a href="./velocidad.html">Velocidad</a></li>
+                        <li><a href="./ph.html">pH</a></li>
+                    </ul>
+
+                    <div class="nav-social">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="header-separador"></div>
+    </section>
+
+
+    <script type="module" src="/JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

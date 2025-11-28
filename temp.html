@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+
+<!-- Bootstrap primero -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<body class="bg-light">
+
+
+    <!-- Header -->
+    <div id="site-header"></div>
+
+
+
+
+    <main class="container my-4">
+
+        <sectiion class="text-center py-4">
+            <h1 class="fw-bold">Conversor de Temperatura</h1>
+            <p class="text-muted">Celsius → Fahrenheit y Kelvin</p>
+            </section>
+            <div class="card p-3 mb-3 shadow-sm" style="border-left: 6px solid #5DC1B9;">
+                <p class="text-muted mb-1">
+                    Instrucción: Usa la calculadora para convertir temperaturas y observar sus equivalencias en
+                    Fahrenheit y
+                    Kelvin.
+                    También puedes revisar la tabla para explorar preguntas que invitan a reflexionar sobre diferentes
+                    rangos térmicos.
+                </p>
+
+                <p class="text-muted fst-italic mb-0">
+                    La tabla no cubre todos los valores posibles, pero incluye ejemplos clave que pueden ayudarte a
+                    aprender
+                    un par de curiosidades.
+                </p>
+            </div>
+            <section class="container my-5">
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- TABLA A LA IZQUIERDA (columna 1) -->
+        <div class="col-12 col-md-7">
+            <div class="card table-responsive p-3 shadow-sm" style="border-left: 6px solid #5DC1B9;">
+                <table class="table table-striped text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Temperatura</th>
+                            <th>Pregunta reflexiva</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>-20</td><td>¿Qué organismos crees que podrían sobrevivir a temperaturas tan frías?</td></tr>
+                        <tr><td>0</td><td>¿Qué le ocurre al agua y cómo afecta esto a los seres vivos?</td></tr>
+                        <tr><td>4</td><td>¿Por qué crees que esta temperatura se usa para almacenar alimentos o muestras biológicas?</td></tr>
+                        <tr><td>15</td><td>¿Qué ecosistemas conoces que existan en este rango de temperatura?</td></tr>
+                        <tr><td>37</td><td>¿Qué microorganismos prosperan a temperaturas cercanas al cuerpo humano?</td></tr>
+                        <tr><td>60</td><td>¿Qué crees que sucede con las proteínas y células expuestas a temperaturas tan elevadas?</td></tr>
+                        <tr><td>80</td><td>¿Qué tipo de vida podría existir en ambientes tan calientes como las fuentes termales?</td></tr>
+                        <tr><td>100</td><td>¿Es posible que exista vida a esta temperatura? ¿Por qué sí o por qué no?</td></tr>
+                        <tr><td>122</td><td>¿Qué microorganismos prosperan a temperatura?</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- TERMÓMETRO + CALCULADORA A LA DERECHA (columna 2) -->
+        <div class="col-12 col-md-5 d-flex justify-content-center">
+            <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%;">
+
+                <!-- Termómetro visual -->
+                <div class="thermo-container my-3 d-flex flex-column align-items-center">
+                    <div class="thermo">
+                        <div class="thermo-level" id="thermoLevel"></div>
+                    </div>
+                    <p id="thermoLabel" class="small text-muted mt-2 mb-0">
+                        Termómetro visual
+                    </p>
+                </div>
+
+                <!-- Input -->
+                <div class="mb-3">
+                    <label for="tempInput" class="form-label fw-semibold">Ingresa temperatura en °C</label>
+                    <input type="text" id="tempInput" class="border-input form-control" placeholder="Ejemplo: 45">
+                </div>
+
+                <!-- Botón -->
+                <button id="convertBtn" class="btn btn-convertir w-100 mb-3">
+                    Convertir
+                </button>
+
+                <!-- Resultados -->
+                <div id="results" class="alert alert-secondary text-center d-none"></div>
+
+                <!-- Dato curioso -->
+                <div id="funFact" class="alert alert-info mt-2 d-none"></div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JS propio -->
+    <script src="./JS/main.js"></script>
+    
+
+    <!-- Otros estilos -->
+<link rel="stylesheet" href="./CSS/header.css">
+<link rel="stylesheet" href="./CSS/footer.css">
+
+<!-- TU CSS DEBE IR AL FINAL PARA GANAR -->
+<link rel="stylesheet" href="./CSS/style.css">
+</body>
+
+</html>

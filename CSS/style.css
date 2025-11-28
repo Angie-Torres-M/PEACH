@@ -1,0 +1,137 @@
+/* Fondo general del cuerpo de la página con un degradado suave */
+body {
+    background: linear-gradient(to bottom right, #F7EFEF, #d1f5f2);
+    padding-top: 80px;
+}
+main {
+    padding-top: 80px; /* ajústalo según te guste */
+}
+
+
+/* ===========================
+   Estilo de las tarjetas (card)
+=========================== */
+/*  - Cambias el radio de borde (sobrescribe el de arriba)
+   - Fondo azul muy clarito para destacar el contenido */
+.card {
+    border-radius: 20px; 
+    border-radius: 12px;
+    background: #f9fbff;
+}
+
+/* Mejora la legibilidad del texto dentro de las cards */
+.card p {
+    line-height: 1.5;
+}
+
+/* Tamaño de letra un poquito más grande para los resultados */
+#results {
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   Botón de convertir
+=========================== */
+
+
+/* Botón personalizado para el botón de convertir:
+   - Color de fondo turquesa
+   - Texto blanco
+   - Negritas
+   - Sin borde */
+.btn-convertir {
+    background-color: #5DC1B9;
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+/* Efecto hover del botón:
+   - Mismo tono pero un poco más oscuro para dar feedback visual */
+.btn-convertir:hover {
+    background-color: #4AB0A7; /* un poco más oscuro para el hover */
+}
+
+/* Clase para inputs con borde del color principal del tema */
+.border-input {
+    border: 1px solid #5DC1B9;
+}
+
+/* ===========================
+   Termómetro visual – estilo científico / vidrio (sin bulbo)
+=========================== */
+
+.thermo-container {
+    gap: 6px;
+    padding-bottom: 10px;
+}
+
+/* Tubo del termómetro */
+.thermo {
+    position: relative;
+    width: 40px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid rgba(100, 120, 140, 0.9);
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.9),
+        rgba(235, 245, 255, 0.65),
+        rgba(255, 255, 255, 0.85)
+    );
+    overflow: hidden;
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, 0.2),
+        0 0 12px rgba(130, 150, 170, 0.4);
+}
+
+/* Reflejo lateral estilo vidrio */
+.thermo::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 7px;
+    width: 10px;
+    height: 70%;
+    border-radius: 999px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.25)
+    );
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* “Líquido” del termómetro */
+.thermo-level {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0; /* se controla con JS */
+    background: linear-gradient(to top, #0d47a1, #d21919);
+    box-shadow: 0 -6px 12px rgba(25, 118, 210, 0.5);
+    transition:
+        height 0.8s ease,
+        background-color 0.8s ease,
+        background 0.8s ease,
+        box-shadow 0.8s ease;
+}
+
+/* ===========================
+   Estilos responsive
+=========================== */
+
+@media (max-width: 576px) {
+    /* Reduce un poco el tamaño del título en pantallas pequeñas */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Ajusta el padding de las cards en móvil para mejor proporción */
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+

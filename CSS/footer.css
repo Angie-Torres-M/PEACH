@@ -1,0 +1,55 @@
+html {
+  --fontTitle: "Montserrat", sans-serif;
+  --fontText: "Nunito Sans", sans-serif;
+  --bgColor: #fff9f2;
+  --primaryColor: #ffd275;
+  --secondaryColor: #5dc1b9;
+  --bottonColor: #ff8360;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.logo-link {
+    text-decoration: none !important;
+    color: #000 !important;
+    font-family: var(--fontTitle);
+}
+
+.logo-link:hover {
+    color: var(--secondaryColor) !important;
+    transition: 0.2s ease-in-out;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+  font-family: var(--fontTitle);
+}
+
+a:hover {
+  color: var(--secondaryColor) !important;
+}
+
+@media (max-width: 462px) {
+  .footer-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

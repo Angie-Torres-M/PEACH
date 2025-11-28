@@ -1,0 +1,199 @@
+/* ===========================
+   VARIABLES GLOBALES
+   (las tuyas están bien, las dejo igual)
+=========================== */
+html {
+    --fontTitle: "Montserrat", sans-serif;
+    --fontText: "Nunito Sans", sans-serif;
+    --bgColor: #FFF9F2;
+    --primaryColor: #FFD275;
+    --secondaryColor: #5DC1B9;
+    --bottonColor: #5DC1B9;
+}
+
+/* Fondo general y espacio para el header fijo */
+body {
+    background: linear-gradient(to bottom right, #F7EFEF, #d1f5f2);
+    padding-top: 100px; /* compensa topbar + navbar */
+}
+
+main {
+    padding-top: 20px;
+}
+
+/* ===========================
+   BARRA SUPERIOR PEACH
+=========================== */
+.peach-topbar {
+    width: 100%;
+    background-color: #5DC1B9;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 0;
+    font-family: var(--fontTitle);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+    .peach-topbar {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===========================
+   HEADER FIJO Y DINÁMICO
+   (envuelve topbar + navbar)
+=========================== */
+.header-fijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando se oculta al hacer scroll hacia abajo */
+.header-fijo.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Línea decorativa opcional (no empuja contenido) */
+.header-separador {
+    width: 100%;
+    height: 0; /* puedes poner 2-4px si quieres una línea visible */
+    background-color: transparent;
+}
+
+/* ===========================
+   NAVBAR PEACH (sin Bootstrap)
+=========================== */
+
+/* Barra de navegación bajo la topbar */
+.peach-navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Contenido interno del nav */
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo de PEACH */
+.nav-logo {
+    font-family: var(--fontTitle);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Botón hamburguesa (visible solo en móvil) */
+.nav-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* por defecto oculto en desktop */
+}
+
+/* Menú en desktop */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Lista de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: var(--fontTitle);
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--secondaryColor);
+}
+
+/* Redes sociales */
+.nav-social a {
+    font-size: 1.4rem;
+    color: #000;
+    margin-left: 0.5rem;
+}
+
+.nav-social a:hover {
+    color: var(--secondaryColor);
+}
+
+/* ===========================
+   MENÚ HAMBURGUESA EN MÓVIL
+   - Menú flotante debajo del navbar
+   - No empuja el contenido
+=========================== */
+@media (max-width: 768px) {
+
+    /* Mostrar el botón hamburguesa */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* El contenedor de la barra (logo + hamburguesa) sigue igual,
+       pero el menú ya no se ve en línea en móvil */
+    .nav-menu {
+        position: absolute;
+        top: 100%;       /* justo debajo de la barra de navegación */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        padding: 1rem 0;
+        display: none;   /* oculto por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        z-index: 2100;
+    }
+
+    /* Cuando se activa la hamburguesa, se muestra */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Links de navegación en columna */
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    /* Redes sociales centradas */
+    .nav-social {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+}
