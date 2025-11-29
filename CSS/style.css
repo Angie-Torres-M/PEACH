@@ -11,7 +11,7 @@ main {
 /* ===========================
    Estilo de las tarjetas (card)
 =========================== */
-/*  - Cambias el radio de borde (sobrescribe el de arriba)
+/*  - Cambia el radio de borde (sobrescribe el de arriba)
    - Fondo azul muy clarito para destacar el contenido */
 .card {
     border-radius: 20px; 
